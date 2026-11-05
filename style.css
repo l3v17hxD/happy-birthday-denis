@@ -1,4 +1,4 @@
-/* ====== Base ====== */
+
 * { box-sizing: border-box; }
 
 body {
@@ -9,7 +9,7 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   color: #fff;
   text-align: center;
-  background-color: #3b1f2b;           /* color de respaldo si no carga la imagen */
+  background-color: #3b1f2b;          
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Capa oscura suave para que el texto se lea sobre cualquier GIF o imagen */
+
 .capa {
   position: fixed;
   inset: 0;
@@ -45,15 +45,13 @@ h1 {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* ====== Fondos de cada pantalla ======
-   Guarda los GIF/imágenes en la carpeta img/ con estos nombres.
-   Si los tuyos se llaman distinto o son .jpg/.png, cámbialo aquí. */
-.pagina-inicio         { background-image: url("img/fondo-inicio.gif"); }
-.pagina-felicitaciones { background-image: url("img/fondo-felicitaciones.gif"); }
-.pagina-mensaje        { background-image: url("img/fondo-mensaje.gif"); }
-.pagina-sorpresa       { background-image: url("img/fondo-sorpresa.gif"); }
 
-/* ====== Pantallas dentro de una sola página ====== */
+.pagina-inicio         { background-image: url("fondo-inicio.gif"); }
+.pagina-felicitaciones { background-image: url("fondo-felicitaciones.gif"); }
+.pagina-mensaje        { background-image: url("fondo-mensaje.gif"); }
+.pagina-sorpresa       { background-image: url("fondo-sorpresa.gif"); }
+
+
 .pantalla { display: none; }
 
 .pantalla.activa {
@@ -66,7 +64,7 @@ h1 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ====== Botones ====== */
+
 .boton {
   display: inline-block;
   margin-top: 0.8rem;
@@ -102,7 +100,7 @@ h1 {
   margin-top: 1.2rem;
 }
 
-/* ====== Botón flotante de sonido ====== */
+
 .btn-flotante {
   position: fixed;
   top: 14px;
@@ -121,7 +119,7 @@ h1 {
 
 .btn-flotante:hover { background: rgba(0, 0, 0, 0.65); }
 
-/* ====== Puerta ====== */
+
 .puerta {
   display: inline-block;
   margin: 1.5rem 0 0.5rem;
@@ -129,7 +127,7 @@ h1 {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* La puerta es un botón: se quitan sus estilos por defecto */
+
 button.puerta {
   background: none;
   border: 0;
@@ -147,7 +145,7 @@ button.puerta {
   border: 8px solid #4a2e1a;
   border-bottom-width: 0;
   border-radius: 75px 75px 0 0;
-  /* luz que se ve cuando la puerta se abre */
+
   background: radial-gradient(circle at 50% 60%, #fff8d6 0%, #ffd166 55%, #ff9a76 100%);
   box-shadow: 0 0 30px rgba(255, 214, 102, 0.55), 0 10px 25px rgba(0, 0, 0, 0.4);
 }
@@ -185,7 +183,7 @@ button.puerta {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* La puerta se abre al pasar el mouse o al tocarla */
+
 .puerta:hover .hoja,
 .puerta.abierta .hoja {
   transform: rotateY(-75deg);
@@ -197,7 +195,6 @@ button.puerta {
   opacity: 0.9;
 }
 
-/* ====== Globos (pantalla de sorpresa) ====== */
 #globos {
   position: fixed;
   inset: 0;
@@ -216,7 +213,7 @@ button.puerta {
   animation: subir linear forwards;
 }
 
-/* nudito del globo */
+
 .globo::before {
   content: "";
   position: absolute;
@@ -228,7 +225,7 @@ button.puerta {
   border-top: 0;
 }
 
-/* hilo del globo */
+
 .globo::after {
   content: "";
   position: absolute;
