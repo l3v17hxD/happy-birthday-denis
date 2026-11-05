@@ -1,9 +1,11 @@
 
+
 * { box-sizing: border-box; }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
   display: grid;
   place-items: center;
   font-family: Georgia, "Times New Roman", serif;
@@ -13,7 +15,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -33,7 +34,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-size: clamp(1.8rem, 6vw, 3.2rem);
   margin: 0 0 1rem;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
@@ -46,10 +47,10 @@ h1 {
 }
 
 
-.pagina-inicio         { background-image: url("fondo-inicio.gif"); }
-.pagina-felicitaciones { background-image: url("fondo-felicitaciones.gif"); }
-.pagina-mensaje        { background-image: url("fondo-mensaje.gif"); }
-.pagina-sorpresa       { background-image: url("fondo-sorpresa.gif"); }
+.pagina-inicio         { background-image: url("img/fondo-inicio.gif"); }
+.pagina-felicitaciones { background-image: url("img/fondo-felicitaciones.gif"); }
+.pagina-mensaje        { background-image: url("img/fondo-mensaje.gif"); }
+.pagina-sorpresa       { background-image: url("img/fondo-sorpresa.gif"); }
 
 
 .pantalla { display: none; }
@@ -195,6 +196,7 @@ button.puerta {
   opacity: 0.9;
 }
 
+
 #globos {
   position: fixed;
   inset: 0;
@@ -212,7 +214,6 @@ button.puerta {
   opacity: 0.9;
   animation: subir linear forwards;
 }
-
 
 .globo::before {
   content: "";
@@ -240,4 +241,16 @@ button.puerta {
   from { transform: translateY(0) rotate(-4deg); }
   50%  { transform: translateY(-60vh) rotate(5deg); }
   to   { transform: translateY(-130vh) rotate(-4deg); }
+}
+
+
+@media (max-width: 600px) {
+  .centro { padding: 1.5rem 1.1rem; }
+
+  .marco { width: 130px; height: 208px; border-radius: 65px 65px 0 0; }
+  .hoja  { border-radius: 57px 57px 0 0; }
+  .panel:nth-child(1) { height: 68px; }
+  .panel:nth-child(2) { height: 80px; }
+
+  .boton { font-size: 1rem; padding: 0.8rem 1.6rem; }
 }
