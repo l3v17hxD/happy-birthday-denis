@@ -1,5 +1,6 @@
 
 
+
 * { box-sizing: border-box; }
 
 body {
@@ -120,7 +121,6 @@ h1 {
 
 .btn-flotante:hover { background: rgba(0, 0, 0, 0.65); }
 
-
 .puerta {
   display: inline-block;
   margin: 1.5rem 0 0.5rem;
@@ -214,6 +214,7 @@ button.puerta {
   opacity: 0.9;
   animation: subir linear forwards;
 }
+
 
 .globo::before {
   content: "";
