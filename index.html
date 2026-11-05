@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this is for you</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-inicio">
+  <div class="capa"></div>
+  <div id="globos"></div>
+  <button class="btn-flotante" id="btn-sonido" aria-label="Pausar o seguir la música" hidden>🔊</button>
+
+  <main class="centro">
+
+    
+    <section class="pantalla activa" id="inicio">
+      <h1>are you ready?</h1>
+      <button class="puerta" id="puerta" aria-label="Abrir la puerta">
+        <span class="marco">
+          <span class="hoja">
+            <span class="panel"></span>
+            <span class="panel"></span>
+            <span class="perilla"></span>
+          </span>
+        </span>
+      </button>
+      <p class="pista">click here denis</p>
+    </section>
+
+    
+    <section class="pantalla" id="felicitaciones">
+      <h1>happy birthday denis!!!</h1>
+      <p class="texto">
+        happy birthday denis!!! :3 i'm so happy cause you have 1 more year here, in 
+        this world, and this year i had the oportunity to meet you, and i want to tell you that you are a very special person,
+        very special for me :p
+      <p class="texto">i made this for you and i hope that you enjoy this, HAPPY BIRTHDAY FOR YOU
+        (idk how old are you turning) but its ok, i made this with a lot love for you and idk
+        what i can give for you and i see what I am studying so i think in this, i hope you have a great day
+        and enjoy your day, its for youuuuu :3
+      </p>
+      <nav class="botones">
+        <button class="boton" data-ir="mensaje">message</button>
+        <button class="boton" data-ir="sorpresa">a giveaway</button>
+      </nav>
+    </section>
+
+    <!-- PANTALLA 3: otro mensaje -->
+    <section class="pantalla" id="mensaje">
+      <h1>my favorite person</h1>
+      <p class="texto">
+        i made more webs cause its so long the text so i just want to say that i feel for you
+        yk? ok the first thing is that i feel very happy cause you are in my life and i want to tell you
+        all things that you are for me, you're so pretty, cute, shy and very very beautiful, 
+        i really like you cause you are so intelligent, creative, but so insecurity, and its ok, i'm here
+        for you and for anything that you need i really like all things about you (that i see), your hair, your eyes
+        your humor,your personality, your way to be, your way to think, your way to see the world.
+      </p>
+      <nav class="botones">
+        <button class="boton" data-ir="felicitaciones">← come back</button>
+        <button class="boton" data-ir="sorpresa">do you like surprises?</button>
+      </nav>
+    </section>
+
+    <!-- PANTALLA 4: sorpresa con globos -->
+    <section class="pantalla" id="sorpresa">
+      <h1>do you like to be my girlfriend?</h1>
+      <p class="texto">
+       i'm very unsecure about this quest, i know that maybe this ruins your birthday, i don't want to be selfish, but i really love you
+       so much and i can't control it, you made me so happy and when started talk more, i feel so happy and secure with you, i want to meet you more,
+       all things that you like and don't like, yours days, all things about you, a-and i wanted to ask you, do you like to be my girlfriend?
+       its ok if you say not cause i can understand, but i never declared a girl in my life and i feel that you
+       you changes me it about me, idk if you be saddly or angry after that but I had to get it out it, 
+      <nav class="botones">
+        <button class="boton pequeno" data-ir="felicitaciones">← Volver</button>
+      </nav>
+    </section>
+
+  </main>
+
+  <audio id="cancion" src="audio/cancion.mp3" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
