@@ -3,7 +3,7 @@ const btnSonido = document.getElementById("btn-sonido");
 const puerta = document.getElementById("puerta");
 const contenedorGlobos = document.getElementById("globos");
 
-// Fondo que le toca a cada pantalla (clases de style.css)
+
 const fondos = {
   inicio: "pagina-inicio",
   felicitaciones: "pagina-felicitaciones",
@@ -11,7 +11,7 @@ const fondos = {
   sorpresa: "pagina-sorpresa",
 };
 
-// ====== Cambiar de pantalla (la música NO se corta) ======
+
 function mostrar(nombre) {
   document.querySelectorAll(".pantalla").forEach((p) => {
     p.classList.toggle("activa", p.id === nombre);
@@ -27,7 +27,7 @@ document.querySelectorAll("[data-ir]").forEach((boton) => {
   boton.addEventListener("click", () => mostrar(boton.dataset.ir));
 });
 
-// ====== La puerta: abre, empieza la música y pasa a felicitaciones ======
+
 puerta.addEventListener("click", () => {
   puerta.classList.add("abierta");
   cancion.play().catch(() => {});
@@ -35,7 +35,7 @@ puerta.addEventListener("click", () => {
   setTimeout(() => mostrar("felicitaciones"), 900);
 });
 
-// ====== Botoncito 🔊/🔇 ======
+
 cancion.addEventListener("play", () => (btnSonido.textContent = "🔊"));
 cancion.addEventListener("pause", () => (btnSonido.textContent = "🔇"));
 btnSonido.addEventListener("click", () => {
@@ -43,7 +43,7 @@ btnSonido.addEventListener("click", () => {
   else cancion.pause();
 });
 
-// ====== Globos (solo en la pantalla de sorpresa) ======
+
 const colores = ["#ff6b9d", "#ffd166", "#06d6a0", "#4cc9f0", "#c77dff", "#ff9a76"];
 let intervaloGlobos = null;
 
